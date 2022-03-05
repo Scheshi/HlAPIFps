@@ -16,6 +16,7 @@ public class EntityPhisycController : NetworkBehaviour
 
     public void Move(float xAxis, float zAxis)
     {
+        rigidbody.angularVelocity = Vector3.zero;
         Vector3 right = transform.right * xAxis;
         Vector3 forward = transform.forward * zAxis;
         Vector3 velocity = (right + forward) * moveSpeed;
